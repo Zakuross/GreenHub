@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Product from '@/components/products/Product.vue'
 import Service from '@/components/services/Service.vue'
 import Connexion from '@/components/authentication/Connexion.vue'
+import Inscription from '@/components/authentication/Inscription.vue'
 import Main from "@/components/Elements Page/Main.vue";
 import Panier from '@/components/cart/Panier.vue'
 
@@ -22,6 +23,11 @@ const routes = [
     path: '/connexion',
     name: 'Connexion',
     component: Connexion
+  },
+  {
+    path: '/inscription',
+    name: 'Inscription',
+    component: Inscription
   },
 
   {
@@ -54,6 +60,11 @@ const router = createRouter({
       path: '/connexion',
       name: 'Connexion',
       component: Connexion
+    },
+    {
+      path: '/inscription',
+      name: 'Inscription',
+      component: Inscription
     },
     {
       path: '/cart',

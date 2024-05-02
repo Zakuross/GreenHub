@@ -4,7 +4,7 @@
       <img src="@/assets/accueil_mobile.webp" alt="Accueil GreenHub" class="max-w-96 h-fit w-96">
     </div>
     <div class="text-center">
-      <h1 class="mt-4 font-bold text-2x1">Nouveaux Produits !</h1>
+      <h1 class="mt-4 font-bold text-2x1">New Products !</h1>
     </div>
     <div class="flex justify-center mt-8">
       <div class="flex flex-wrap justify-center">
@@ -13,7 +13,7 @@
             <template v-for="(product, productIndex) in pair" :key="productIndex">
               <div class="card w-full md:w-96 bg-base-100 shadow-xl md:m-4 mb-4">
                 <figure class="px-10 pt-10">
-                  <img :src="product.image" :alt="product.name" class="rounded-xl"/>
+                  <img :src="product.image" :alt="product.name" class="rounded-xl product-image"/>
                 </figure>
                 <div class="card-body items-center text-center">
                   <h2 class="card-title">{{ product.name }}</h2>
@@ -30,7 +30,7 @@
     </div>
 
     <div class="text-center">
-      <h1 class="mt-4 font-bold text-2x1">Des services eco-responsables ? <br>C'est possible !!</h1>
+      <h1 class="mt-4 font-bold text-2x1">Eco-responsible services ? <br>It's possible !!</h1>
     </div>
     <div class="flex justify-center mt-8">
       <div class="flex flex-wrap justify-center">
@@ -39,7 +39,7 @@
             <template v-for="(service, serviceIndex) in pair" :key="serviceIndex">
               <div class="card w-full md:w-96 bg-base-100 shadow-xl md:m-4 mb-4">
                 <figure class="px-10 pt-10">
-                  <img :src="service.image" :alt="service.name" class="rounded-xl"/>
+                  <img :src="service.image" :alt="service.name" class="rounded-xl service-image"/>
                 </figure>
                 <div class="card-body items-center text-center">
                   <h2 class="card-title">{{ service.name }}</h2>
@@ -60,7 +60,7 @@
             <div v-for="(post, index) in latestPosts" :key="index" class="card w-full md:w-96 bg-base-100 shadow-xl md:m-4 mb-4">
               <h2 class="card-title items-center text-center">{{ post.name }}</h2>
               <figure class="px-10 pt-10">
-                <img :src="post.image" :alt="post.name" class="rounded-xl"/>
+                <img :src="post.image" :alt="post.name" class="rounded-xl post-image"/>
               </figure>
               <div class="card-body items-center text-center">
                 <p>{{ post.description }}</p>
@@ -84,15 +84,15 @@ export default {
   data() {
     return {
       products: [
-        { name: 'Cube Vaisselle', description: 'Savon Solide', price: 6, image: cubeVaisselleImage },
-        { name: 'Charlotte Alimentaire', description: 'Charlotte alimentaire en tissu', price: 6, image: charlotteAlimentaireImage },
+        { name: 'Dish Cube', description: 'Solid, highly effective soap', price: 6, image: cubeVaisselleImage },
+        { name: 'Food Charlotte', description: 'Charlotte alimentaire en tissu', price: 6, image: charlotteAlimentaireImage },
       ],
       services: [
-        {name: 'Lavage Voiture', description: 'Plus ou moins tout compris', price: 20, image: lavageVoiture },
-        {name: 'Location de velos', description: 'Ecologique et pratique !', price: 6, image: localVelo},
+        {name: 'Car Wash', description: 'All-Inclusive!', price: 20, image: lavageVoiture },
+        {name: 'Bicycle rental', description: 'Ecological and practical!', price: 6, image: localVelo},
       ],
       latestPosts : [
-        {name: 'La charlotte alimentaire : Une revolution', description: `Les charlottes alimentaires sont désormais partout, dans nos cuisines, dans nos écoles, dans nos magasins. C'est tout simplement devenu un must have !`, image: charlotteAlimentaireImage}
+        {name: 'Food charlotte: a revolution', description: `Food charlottes are now everywhere, in our kitchens, schools and stores. They've simply become a must-have!`, image: charlotteAlimentaireImage}
       ]
     };
   },
@@ -126,6 +126,22 @@ export default {
 </script>
 
 <style scoped>
+
+.service-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.product-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.post-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
 
 
 </style>

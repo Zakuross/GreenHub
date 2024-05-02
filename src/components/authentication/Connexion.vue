@@ -1,41 +1,61 @@
 <template>
-  <h1 class="text-center">Se connecter</h1>
-  <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-    <form class="card-body">
-      <div class="form-control">
-        <label class="label">
-          <span class="label-text">Email</span>
-        </label>
-        <input type="email" placeholder="email" class="input input-bordered" required />
+  <div class="flex flex-col items-center ">
+
+    <div class="bg-grey-lighter min-h-screen flex flex-col">
+      <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
+        <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
+          <h1 class="mb-8 text-3xl font-roboto text-center">Se connecter</h1>
+
+
+          <input
+            v-model="email"
+            type="text"
+            class="block border border-grey-light w-full p-3 rounded mb-4"
+            name="email"
+            placeholder="Email" />
+
+
+          <input
+            v-model="password"
+            type="password"
+            class="block border border-grey-light w-full p-3 rounded mb-4"
+            name="password"
+            placeholder="Password" />
+
+
+          <router-link to="/">
+            <button
+              @click="loginAction"
+              type="submit"
+              class="w-full text-center py-3 rounded btn btn-primary   text-white hover:bg-green-dark focus:outline-none my-1"
+            >Connexion
+            </button>
+          </router-link>
+          <div class="text-center text-sm text-grey-dark mt-4">
+            By signing up, you agree to the
+            <a class="no-underline border-b border-grey-dark text-grey-dark" href="#">
+              Terms of Service
+            </a> and
+            <a class="no-underline border-b border-grey-dark text-grey-dark" href="#">
+              Privacy Policy
+            </a>
+          </div>
+        </div>
+
+        <div class="text-grey-dark mt-6">
+          Pas encore de compte ?
+          <router-link to="/inscription">
+
+            <a class="no-underline border-b border-blue text-blue">
+              Créer un compte
+            </a>
+          </router-link>
+        </div>
       </div>
-      <div class="form-control">
-        <label class="label">
-          <span class="label-text">Mot de passe</span>
-        </label>
-        <input type="password" placeholder="mot de passe" class="input input-bordered" required />
-        <label class="label">
-          <a href="#" class="label-text-alt link link-hover">Mot de passe oublié ?</a>
-        </label>
-      </div>
-      <div class="form-control mt-6">
-        <button class="btn btn-primary">Connexion</button>
-      </div>
-      <div class="form-control">
-        <label class="label">
-          <input type="checkbox" required>
-          <span class="label-text">J'accepte les conditions générales et la politique de confidentialité</span>
-        </label>
-      </div>
-    </form>
+    </div>
   </div>
-  <h1 class="text-center">Pas encore de compte ?</h1>
-  <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-    <form class="card-body">
-      <div class="form-control mt-6">
-        <button class="btn btn-primary">S'inscrire</button>
-      </div>
-    </form>
-  </div>
+
+
 </template>
 <script setup>
 </script>
