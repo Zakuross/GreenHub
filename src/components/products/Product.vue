@@ -24,19 +24,19 @@
 </template>
 
 <script>
- import {useStore} from '@/stores/store.js';
+ // import { useStore } from '@/stores/store.js';
 import { onMounted } from 'vue'
  export default {
 
-   setup() {
-     const store = useStore();
-     onMounted(()=>{
-       store.getProducts()
-     })
-     return {
-       products: store.products,
-     }
-   }
+   // setup() {
+   //   // const store = useStore();
+   //   onMounted(()=>{
+   //     store.getProducts()
+   //   })
+   //   return {
+   //     products: store.products,
+   //   }
+   // }
  }
 </script>
 <style scoped>

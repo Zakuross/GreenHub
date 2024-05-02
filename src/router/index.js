@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+
 import Product from '@/components/products/Product.vue'
 import Service from '@/components/services/Service.vue'
+import Connexion from '@/components/authentication/Connexion.vue'
 import Main from "@/components/Elements Page/Main.vue";
 import Panier from '@/components/cart/Panier.vue'
 
@@ -16,6 +17,11 @@ const routes = [
     path: '/product',
     name: 'Product',
     component: Product
+  },
+  {
+    path: '/connexion',
+    name: 'Connexion',
+    component: Connexion
   },
 
   {
@@ -43,6 +49,11 @@ const router = createRouter({
       path: '/service',
       name: 'service',
       component: Service
+    },
+    {
+      path: '/connexion',
+      name: 'Connexion',
+      component: Connexion
     },
     {
       path: '/cart',

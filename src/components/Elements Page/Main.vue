@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="acceuil-mobile w-full bg-base-100">
-      <img src="@/assets/accueil_mobile.webp" alt="Acceuil GreenHub" class="max-w-96 h-fit w-96">
+      <img src="@/assets/accueil_mobile.webp" alt="Accueil GreenHub" class="max-w-96 h-fit w-96">
     </div>
     <div class="text-center">
       <h1 class="mt-4 font-bold text-2x1">Nouveaux Produits !</h1>
@@ -76,7 +76,7 @@
 import cubeVaisselleImage from '@/assets/cube_vaisselle.webp'
 import charlotteAlimentaireImage from '@/assets/charlotte_alimentaire.webp'
 import lavageVoiture from '@/assets/lavage_voiture.webp'
-import locaVelo from '@/assets/location_velo.webp'
+import localVelo from '@/assets/location_velo.webp'
 
 
 export default {
@@ -89,7 +89,7 @@ export default {
       ],
       services: [
         {name: 'Lavage Voiture', description: 'Plus ou moins tout compris', price: 20, image: lavageVoiture },
-        {name: 'Location de velos', description: 'Ecologique et pratique !', price: 6, image: locaVelo},
+        {name: 'Location de velos', description: 'Ecologique et pratique !', price: 6, image: localVelo},
       ],
       latestPosts : [
         {name: 'La charlotte alimentaire : Une revolution', description: `Les charlottes alimentaires sont désormais partout, dans nos cuisines, dans nos écoles, dans nos magasins. C'est tout simplement devenu un must have !`, image: charlotteAlimentaireImage}
@@ -124,3 +124,8 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+
+</style>
