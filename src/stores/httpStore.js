@@ -1,10 +1,11 @@
 import { defineStore } from 'pinia'
 import axios from './store.js'
 
-// axios.defaults.baseURL = import.meta.env.VITE_FAKESTORE_URL
-// axios.defaults.baseURL = import.meta.env.VITE_API_URL
-// axios.defaults.withCredentials = true
-// axios.defaults.withXSRFToken = true
+
+axios.defaults.baseURL = import.meta.env.VITE_FAKESTORE_URL
+axios.defaults.baseURL = import.meta.env.VITE_API_URL
+axios.defaults.withCredentials = true
+axios.defaults.withXSRFToken = true
 export const useHttpStore = defineStore({
   id: 'http',
   state: () => ({
@@ -22,9 +23,9 @@ export const useHttpStore = defineStore({
 
     async getProducts() {
       try {
-        let response = await axios.get('/products')
+        let response = await axios.get('/product')
         this.products = response.data.products
-        return this.products
+        return this.product
       } catch (error) {
         console.log(error)
       }
@@ -32,7 +33,7 @@ export const useHttpStore = defineStore({
 
     async getProduct(id) {
       try {
-        let response = await axios.get('/products/' + id)
+        let response = await axios.get('/product/' + id)
         this.product = response.data.product
         return this.product
       } catch (error) {
