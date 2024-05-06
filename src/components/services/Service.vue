@@ -1,6 +1,6 @@
 <template>
   <div class="services">
-    <h1 class="text-center">Tous les services</h1>
+    <h1 class="text-center">All Services</h1>
 
     <div class="search-bar-wrapper">
       <input type="text" class="search-bar" placeholder="Rechercher un service">

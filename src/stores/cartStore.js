@@ -15,6 +15,7 @@ export const useCartStore = defineStore({
     }
   },
   actions: {
+
     persistToLocalStorage() {
       localStorage.setItem('cartItems', JSON.stringify(this.items))
       localStorage.setItem('cartTotalItems', JSON.stringify(this.totalItems))

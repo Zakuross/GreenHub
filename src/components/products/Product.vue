@@ -1,6 +1,6 @@
 <template>
   <div class="products">
-    <h1 class=" text-center">Tous les produits</h1>
+    <h1 class=" text-center">All Products</h1>
     <div class="search-bar-wrapper">
       <div class="search-bar text-center">
         <div class="form-control">
@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="product-list">
-      <div v-for="product in products" :key="product.id" class="product-card">
+      <div v-for="product in product" :key="product.id" class="product-card">
         <img :src="product.image" :alt="product.title" class="product-image">
         <div class="product-details">
           <h2>{{ product.title }}</h2>
