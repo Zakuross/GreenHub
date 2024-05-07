@@ -23,8 +23,8 @@ export const useHttpStore = defineStore({
 
     async getProducts() {
       try {
-        let response = await axios.get('/product')
-        this.products = response.data.products
+        let response = await axios.get('/products')
+        this.product = response
         return this.product
       } catch (error) {
         console.log(error)

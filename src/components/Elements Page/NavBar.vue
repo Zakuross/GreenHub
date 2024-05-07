@@ -20,7 +20,7 @@
 <!--          <RouterLink to="/">-->
 <!--            <li><a>Accueil</a></li>-->
 <!--          </RouterLink>-->
-          <router-link to="/product">
+          <router-link to="/products">
             <li><a>Product</a></li>
           </router-link>
           <RouterLink to="/service">

@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="product-list">
-      <div v-for="product in product" :key="product.id" class="product-card">
+      <div v-for="product in products" :key="product.id" class="product-card">
         <img :src="product.image" :alt="product.title" class="product-image">
         <div class="product-details">
           <h2>{{ product.title }}</h2>
@@ -34,7 +34,7 @@ import { onMounted } from 'vue'
         store.getProducts()
       })
       return {
-        product: store.product,
+        products: store.product,
       }
     }
  }
@@ -71,6 +71,8 @@ import { onMounted } from 'vue'
   width: 100%;
   border-radius: 5px;
 }
+
+
 
 .product-details {
   margin-top: 10px;
