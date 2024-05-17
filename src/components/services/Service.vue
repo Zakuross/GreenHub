@@ -3,7 +3,7 @@
     <h1 class="text-center">All Services</h1>
 
     <div class="search-bar-wrapper">
-      <input type="text" class="search-bar" placeholder="Rechercher un service">
+      <input type="text" class="search-bar" placeholder="Search">
     </div>
 
 

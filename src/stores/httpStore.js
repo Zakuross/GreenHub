@@ -2,10 +2,10 @@ import { defineStore } from 'pinia'
 import axios from './store.js'
 
 
-axios.defaults.baseURL = import.meta.env.VITE_FAKESTORE_URL
-axios.defaults.baseURL = import.meta.env.VITE_API_URL
-axios.defaults.withCredentials = true
-axios.defaults.withXSRFToken = true
+// axios.defaults.baseURL = import.meta.env.VITE_FAKESTORE_URL
+// axios.defaults.baseURL = import.meta.env.VITE_API_URL
+// axios.defaults.withCredentials = true
+// axios.defaults.withXSRFToken = true
 export const useHttpStore = defineStore({
   id: 'http',
   state: () => ({
@@ -23,55 +23,28 @@ export const useHttpStore = defineStore({
 
     async getProducts() {
       try {
-        let response = await axios.get('/products')
+        let response = await axios.get('https://fakestoreapi.com/products')
         this.product = response
         return this.product
       } catch (error) {
-        console.log(error)
+        console.log('Error fetching product: 1',error)
       }
     },
 
     async getProduct(id) {
       try {
-        let response = await axios.get('/product/' + id)
-        this.product = response.data.product
+        let response = await axios.get("/products"+id)
+        this.product = response.data;
         return this.product
-      } catch (error) {
-        console.log(error)
+      }catch (error) {
+        console.error('Error fetching product: 2', error);
       }
-    },
-
-    async register(userData) {
-      try {
-        return await axios.post('/register', userData)
-      } catch (error) {
-        console.log(error)
-      }
-    },
-    async login(loginData) {
-      try {
-        let response = await axios.post('login', loginData)
-        this.user = response.data.data.user
-        let token = response.data.data.token
-        // setting the token for future request
-        axios.defaults.headers.common = {
-          'Authorization': `Bearer ${token}`
-        }
-        this.authenticated = true
-        return this.user
-      } catch (error) {
-        console.log(error)
-      }
-    },
-    logout(){
-      this.user = null
-      // deleting the token
-      this.authenticated = false
-      delete axios.defaults.headers.common
-    },
-    async postOrder(orderData){
-      let response = await axios.post('/orders', orderData)
-      return response.data
     }
+
+
+
+
+
+
   }
 })

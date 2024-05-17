@@ -25,19 +25,41 @@
 
 <script>
  import { useHttpStore } from '@/stores/httpStore.js';
-import { onMounted } from 'vue'
+import { watchEffect} from 'vue'
  export default {
 
-    setup() {
-       const store = useHttpStore();
-      onMounted(()=>{
-        store.getProducts()
-      })
-      return {
-        products: store.product,
-      }
-    }
+   data() {
+     return {
+       products: null
+     }
+   },
+   methods: {
+     async fetchProducts() {
+       const httpStore = useHttpStore()
+       this.products = await httpStore.getProducts()
+     }
+   },
+   created() {
+     this.fetchProducts()
+   },
+
+
+    // setup() {
+    //    const store = useHttpStore();
+    //   watchEffect(()=>{
+    //     store.getProducts()
+    //   })
+    //   return {
+    //     products: store.product,
+    //   }
+    // }
+
+
+
+
  }
+
+
 </script>
 <style scoped>
 
