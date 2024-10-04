@@ -30,8 +30,8 @@ import { watchEffect} from 'vue'
 
    data() {
      return {
-       products: null
-     }
+       products: [],
+     };
    },
    methods: {
      async fetchProducts() {

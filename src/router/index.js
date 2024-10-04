@@ -7,6 +7,7 @@ import Connexion from '@/components/authentication/Connexion.vue'
 import Inscription from '@/components/authentication/Inscription.vue'
 import Main from "@/components/Elements Page/Main.vue";
 import Panier from '@/components/cart/Panier.vue'
+import ProductList from '@/views/product/ProductList.vue'
 
 
 const routes = [
@@ -17,8 +18,8 @@ const routes = [
   },
   {
     path: '/products',
-    name: 'Product',
-    component: ProductView
+    name: 'products',
+    component: Product
   },
   {
     path: '/connexion',
@@ -48,9 +49,14 @@ const router = createRouter({
       component: Main
     },
     {
-      path: '/products',
-      name: 'products',
-      component: Product
+      path: '/products-view',
+      name: 'ProductV',
+      component: ProductView
+    },
+    {
+      path: '/products-list',
+      name: 'ProductL',
+      component: ProductList
     },
     {
       path: '/service',

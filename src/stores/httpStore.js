@@ -11,19 +11,17 @@ export const useHttpStore = defineStore({
   state: () => ({
     products: null,
     product: null,
-    user: null,
-    authenticated: false
   }),
-  getters: {
-    currentUser(){
-      return this.user
-    },
-  },
+  // getters: {
+  //   currentUser(){
+  //     return this.user
+  //   },
+  // },
   actions: {
 
     async getProducts() {
       try {
-        let response = await axios.get('https://fakestoreapi.com/products')
+        let response = await axios.get('/products')
         this.product = response
         return this.product
       } catch (error) {
@@ -37,7 +35,7 @@ export const useHttpStore = defineStore({
         this.product = response.data;
         return this.product
       }catch (error) {
-        console.error('Error fetching product: 2', error);
+        console.log('Error fetching product: 2', error);
       }
     }
 

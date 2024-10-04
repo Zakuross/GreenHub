@@ -26,36 +26,44 @@
             </div>
             <div class="flex-wrap hidden -mx-2 md:flex">
               <div class="w-1/2 p-2 sm:w-1/4">
+                <router-link to="products-list">
                 <a
                   class="block border border-gray-200 hover:border-cyan-400  "
                   href="#">
                   <img class="object-contain w-full lg:h-28"
                        src="https://i.postimg.cc/Z5KhRkD6/download-1-removebg-preview.png" alt="">
                 </a>
+                </router-link>
               </div>
               <div class="w-1/2 p-2 sm:w-1/4">
+                <router-link to="products-list">
                 <a
                   class="block border border-gray-200 hover:border-cyan-400"
                   href="#">
                   <img class="object-contain w-full lg:h-28"
                        src="https://i.postimg.cc/8kJBrw03/download-removebg-preview.png" alt="">
                 </a>
+                </router-link>
               </div>
               <div class="w-1/2 p-2 sm:w-1/4">
+                <router-link to="products-list">
                 <a
                   class="block border border-gray-200 hover:border-cyan-400 "
                   href="#">
                   <img class="object-contain w-full lg:h-28"
                        src="https://i.postimg.cc/0jwyVgqz/Microprocessor1-removebg-preview.png" alt="">
                 </a>
+                </router-link>
               </div>
               <div class="w-1/2 p-2 sm:w-1/4">
+                <router-link to="products-list">
                 <a
                   class="block border border-gray-200 hover:border-cyan-400"
                   href="#">
                   <img class="object-contain w-full lg:h-28"
                        src="https://i.postimg.cc/0N4Kk1PN/black-microprocessors-removebg-preview.png" alt="">
                 </a>
+                </router-link>
               </div>
             </div>
           </div>
@@ -122,8 +130,8 @@
               <h2 class="mb-2 text-lg font-bold text-gray-700 ">Description :</h2>
               <div class="p-3 lg:p-5 ">
                 <div class="flex ">
-<span class="mr-3 text-gray-500">
-</span>
+                  <span class="mr-3 text-gray-500">
+                  </span>
                   <div>
 
                     <h2 class="text-base font-semibold text-gray-700 ">
@@ -142,8 +150,8 @@
               <span class="text-base text-gray-600 ">In Stock</span>
               <p class="mt-2 text-sm text-cyan-500 ">Ships from china.
                 <span class="text-gray-600 ">
-Most customers receive within 3-31 days.
-</span>
+                    Most customers receive within 3-31 days.
+                </span>
               </p>
             </div>
             <div class="mb-6 "></div>
